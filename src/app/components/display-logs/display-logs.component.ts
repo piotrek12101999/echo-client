@@ -6,7 +6,7 @@ import { IDBLog } from "src/app/models/logs.model";
 @Component({
   selector: "app-display-logs",
   templateUrl: "./display-logs.component.html",
-  styleUrls: ["./display-logs.component.sass"],
+  styleUrls: ["./display-logs.component.scss"],
 })
 export class DisplayLogsComponent {
   logs: IDBLog[];

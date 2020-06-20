@@ -1,11 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { AddLogComponent } from "./components/add-log/add-log.component";
-import { DisplayLogsComponent } from "./components/display-logs/display-logs.component";
-
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.sass"],
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
   title = "client";
