@@ -1,0 +1,8 @@
+<ul class="logs">
+  <li *ngFor="let logObj of logs">
+    <app-log [log]="logObj"></app-log>
+  </li>
+</ul>
+
+<input [(ngModel)]="name">
+<button [disabled]="name === ''" (click)="searchLogs()"> Search </button>
