@@ -1,7 +1,5 @@
-import { Component } from "@angular/core";
-import { LogComponent } from "../log/log.component";
-import { DataService } from "../../services/data/data.service";
-import { IDBLog } from "src/app/models/logs.model";
+import { Component, Input } from "@angular/core";
+import { IViewLog } from "src/app/models/logs.model";
 
 @Component({
   selector: "app-display-logs",
@@ -9,15 +7,6 @@ import { IDBLog } from "src/app/models/logs.model";
   styleUrls: ["./display-logs.component.scss"],
 })
 export class DisplayLogsComponent {
-  logs: IDBLog[];
-  name = "";
-
-  constructor(private _dataService: DataService) {}
-
-  searchLogs() {
-    this._dataService.getLogs(this.name).subscribe((logs) => {
-      this.name = "";
-      this.logs = logs;
-    });
-  }
+  @Input() logs: IViewLog[] = [];
+  constructor() {}
 }

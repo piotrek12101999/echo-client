@@ -1,3 +1,14 @@
-<p>
-  add-log works!
-</p>
+<div class="container">
+  <form class="form" (ngSubmit)="onSubmit()">
+    <app-input [formGroup]="logForm" id="name" placeholder="name" [error]="name.invalid" errorMessage="name invalid"
+      required>
+    </app-input>
+    <app-input [formGroup]="logForm" id="message" placeholder="message" [error]="message.invalid"
+      errorMessage="message invalid" required>
+    </app-input>
+    <button type="submit" mat-button color="primary" [disabled]="logForm.invalid">Add log</button>
+  </form>
+  <div class="display">
+    <app-display-logs [logs]="logs"></app-display-logs>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { IDBLog } from "src/app/models/logs.model";
+import { IViewLog } from "src/app/models/logs.model";
 
 @Component({
   selector: "app-log",
@@ -7,7 +7,7 @@ import { IDBLog } from "src/app/models/logs.model";
   styleUrls: ["./log.component.scss"],
 })
 export class LogComponent {
-  @Input() log: IDBLog;
+  @Input() log: IViewLog;
 
   constructor() {}
 }

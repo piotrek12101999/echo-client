@@ -6,3 +6,7 @@ export interface ILog {
 export interface IDBLog extends ILog {
   _id: string;
 }
+
+export interface IViewLog extends IDBLog {
+  origin: "client" | "server";
+}
