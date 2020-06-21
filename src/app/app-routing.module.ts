@@ -2,11 +2,11 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { AddLogComponent } from "./components/add-log/add-log.component";
-import { DisplayLogsComponent } from "./components/display-logs/display-logs.component";
+import { HistoryLogsComponent } from "./components/history-logs/history-logs.component";
 
 const routes: Routes = [
   { path: "", component: AddLogComponent },
-  { path: "history", component: DisplayLogsComponent },
+  { path: "history", component: HistoryLogsComponent },
 ];
 
 @NgModule({

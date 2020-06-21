@@ -1,3 +1,15 @@
-<p>
-  history-logs works!
-</p>
+<div class="history">
+  <div class="search">
+    <mat-form-field class="input">
+      <mat-label>Search</mat-label>
+      <input matInput [(ngModel)]="name">
+      <mat-hint> Case sensitive</mat-hint>
+    </mat-form-field>
+    <br />
+    <button type="submit" mat-button color="primary" [disabled]="name.length === 0" (click)="searchForLogs()">Search for
+      logs</button>
+  </div>
+  <div class="logs">
+    <app-display-logs [logs]="logs"> </app-display-logs>
+  </div>
+</div>
