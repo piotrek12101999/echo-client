@@ -1,3 +1,13 @@
-<p>
-  {{ log._id }} {{ log.name }}
-</p>
+<div [ngClass]="['log', log.origin]">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{ log.name }}</mat-card-title>
+      <mat-card-subtitle> {{ log._id}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{ log.message }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

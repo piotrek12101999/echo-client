@@ -1,1 +1,27 @@
+@mixin card($color) {
+  background: $color;
+}
 
+.log {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  &.client {
+    align-items: flex-start;
+
+    .card {
+      @include card(#eee);
+    }
+  }
+
+  &.server {
+    align-items: flex-end;
+
+    .card {
+      @include card(linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%));
+      color: white;
+    }
+  }
+}
