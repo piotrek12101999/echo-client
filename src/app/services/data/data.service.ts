@@ -3,13 +3,13 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { ILog, IDBLog } from "src/app/models/logs.model";
 import { Observable, of } from "rxjs";
 import { catchError } from "rxjs/operators";
+import { environment } from "../../../environments/environment";
 
 @Injectable({
   providedIn: "root",
 })
 export class DataService {
-  private _apiURL = "http://localhost:3000";
-  private _logRoute = `${this._apiURL}/logs`;
+  private _logRoute = `${environment.apiURL}/logs`;
 
   private _httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json" }),
